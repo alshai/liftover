@@ -21,6 +21,7 @@ pkg_search_module(PKG_HTSLIB REQUIRED htslib)
 
 # sdsl
 pkg_search_module(PKG_LIBDIVSUFSORT REQUIRED libdivsufsort)
+pkg_search_module(PKG_SDSL REQUIRED sdsl-lite)
 
 add_executable(leviosam leviosam.cpp)
 target_link_libraries(leviosam ${PKG_HTSLIB_LDFLAGS})
