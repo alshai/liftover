@@ -53,13 +53,15 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 
 add_executable(leviosam leviosam.cpp)
 target_link_libraries(leviosam ${PKG_HTSLIB_LDFLAGS})
-target_link_libraries(leviosam sdsl)
+target_link_libraries(leviosam ${PKG_LIBDIVSUFSORT_LIBDIR}/libsdsl.a)
+#target_link_libraries(leviosam sdsl)
 target_link_libraries(leviosam pthread)
 
 
 add_executable(leviosam_test leviosam_test.cpp)
 target_link_libraries(leviosam_test ${PKG_HTSLIB_LDFLAGS})
-target_link_libraries(leviosam_test sdsl)
+target_link_libraries(leviosam_test ${PKG_LIBDIVSUFSORT_LIBDIR}/libsdsl.a)
+#target_link_libraries(leviosam_test sdsl)
 target_link_libraries(leviosam_test gtest gtest_main)
 
 add_test(NAME leviosam_test COMMAND leviosam_test
