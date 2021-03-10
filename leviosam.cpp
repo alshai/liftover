@@ -240,7 +240,7 @@ void lift_run(lift_opts args) {
 }
 
 
-lift::LiftMap lift_from_chain(std::string fname) {
+/*lift::LiftMap lift_from_chain(std::string fname) {
                               //NameMap names, LengthMap lengths) {
     if (fname == "") {
         fprintf(stderr, "chain file name is required!! \n");
@@ -250,7 +250,7 @@ lift::LiftMap lift_from_chain(std::string fname) {
     chain::ChainFile* cfp = chain::chain_open(fname);
     // chain::bcf_hdr_t* hdr = bcf_hdr_read(fp);
     return lift::LiftMap(cfp);
-}
+}*/
 
 
 lift::LiftMap lift_from_vcf(std::string fname, 
